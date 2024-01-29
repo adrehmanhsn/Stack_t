@@ -51,7 +51,6 @@
 
 // ==================================== Header files ===================================
 #include "std_types.h"                      // The Custom Stander Types library
-
 // ======================================= Macros =======================================
 
 /*
@@ -68,7 +67,7 @@ typedef struct stack_ds
 {
     uint32_t stack_pointer;
     uint32_t data[STACK_MAX_SIZE];
-}stack_ds_t;
+}stack_t;
 
 typedef enum stack_status
 {
@@ -79,48 +78,80 @@ typedef enum stack_status
 
 // =================================== Function Prototypes ==================================
 /**
+ **************************************************************************************
  * @brief Initializes the stack.
  *
  * This function initializes the stack by setting the stack pointer to -1.
  *
- * @param the_stack Pointer to the stack data structure.
+ * @param stack_obj Pointer to the stack data structure.
  * @return R_OK if initialization is successful, R_NOK otherwise.
+ **************************************************************************************
  */
-return_status_t stack_init(stack_ds_t *the_stack);
+return_status_t stack_init(stack_t *stack_obj);
 
 /**
+ **************************************************************************************
  * @brief Pushes a value onto the stack.
  *
  * This function pushes a value onto the stack if the stack is not full.
  *
- * @param the_stack Pointer to the stack data structure.
+ * @param stack_obj Pointer to the stack data structure.
  * @param value The value to push onto the stack.
  * @return R_OK if the push operation is successful, R_NOK otherwise.
+ **************************************************************************************
  */
-return_status_t stack_push(stack_ds_t *the_stack , uint32_t value);
+return_status_t stack_push(stack_t *stack_obj , uint32_t value);
 
 /**
+ **************************************************************************************
  * @brief Pops a value from the stack.
  *
  * This function pops a value from the stack if the stack is not empty.
  *
- * @param the_stack Pointer to the stack data structure.
+ * @param stack_obj Pointer to the stack data structure.
  * @param value Pointer to store the popped value.
  * @return R_OK if the pop operation is successful, R_NOK otherwise.
+ **************************************************************************************
  */
-return_status_t stack_pop(stack_ds_t *the_stack , uint32_t *value);
+return_status_t stack_pop(stack_t *stack_obj , uint32_t *value);
 
 /**
+ **************************************************************************************
  * @brief Retrieves the value at the top of the stack.
  *
  * This function retrieves the value at the top of the stack without
  * removing it.
  *
- * @param the_stack Pointer to the stack data structure.
+ * @param stack_obj Pointer to the stack data structure.
  * @param value Pointer to store the top value.
  * @return R_OK if the operation is successful, R_NOK otherwise.
+ **************************************************************************************
  */
-return_status_t stack_top(stack_ds_t *the_stack , uint32_t *value);
+return_status_t stack_top(stack_t *stack_obj , uint32_t *value);
 
+/**
+ **************************************************************************************
+ * @brief Retrieves the size of the stack.
+ *
+ * This function retrieves the size of the stack
+ *
+ * @param stack_obj Pointer to the stack data structure.
+ * @param value Pointer to store the stack size.
+ * @return R_OK if the operation is successful, R_NOK otherwise.
+ **************************************************************************************
+ */
+return_status_t stack_size(stack_t *stack_obj, uint32_t *value);
 
+/**
+ **************************************************************************************
+ * @brief Retrieves the size of the stack.
+ *
+ * This function retrieves the size of the stack
+ *
+ * @param stack_obj Pointer to the stack data structure.
+ * @param value Pointer to store the stack size.
+ * @return R_OK if the operation is successful, R_NOK otherwise.
+ **************************************************************************************
+ */
+return_status_t stack_display(stack_t *stack_obj);
 #endif
