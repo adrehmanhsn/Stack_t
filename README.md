@@ -59,8 +59,8 @@ Feel free to explore the provided functions and customize the stack implementati
 
 ## المؤلف
 - **عبدالرحمن حسن السيد** (Adrehman)
-  - LinkedIn: [Adrehman](https://www.linkedin.com/in/adrehmanhsn)
-  - GitHub: [adrehmanhsn](https://github.com/adrehmanhsn)
+  - لينكدان: [Adrehman](https://www.linkedin.com/in/adrehmanhsn)
+  - جيت هب: [adrehmanhsn](https://github.com/adrehmanhsn)
   - البريد الإلكتروني: adrehmanhsn@hotmail.com
 
 ## الإصدار
